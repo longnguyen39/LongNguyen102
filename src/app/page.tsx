@@ -17,6 +17,11 @@ export default function Home() {
                 className={styles.profileImage}
                 priority
               />
+              <div className={styles.contactLinks}>
+                <a href="mailto:your.email@example.com" className={styles.contactLinkItem}>Email</a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className={styles.contactLinkItem}>LinkedIn</a>
+                <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className={styles.contactLinkItem}>GitHub</a>
+              </div>
             </div>
             <div className={styles.heroIntroCol}>
               <h1 className={styles.title}>Long Nguyen</h1>
@@ -27,6 +32,9 @@ export default function Home() {
                     <strong>iOS Developer & App Creator:</strong> Crafting impactful iOS applications designed to enhance daily life. Proud to have <strong>4 apps</strong> live on the App Store!
                   </li>
                   <li>
+                    <strong>AI Enthusiast:</strong> Deeply exploring how Artificial Intelligence can serve as a "bicycle for the mind," empowering us to innovate, think smarter, and improve our world.
+                  </li>
+                  <li>
                     <strong>Active Lifestyle:</strong> When I'm not coding, you'll often find me:
                     <ul className={styles.hobbyList}>
                       <li>Exploring scenic trails while hiking</li>
@@ -34,9 +42,6 @@ export default function Home() {
                       <li>Hitting the pavement for an energizing run</li>
                       <li>Enjoying a friendly game of Pickleball</li>
                     </ul>
-                  </li>
-                  <li>
-                    <strong>AI Enthusiast:</strong> Deeply exploring how Artificial Intelligence can serve as a "bicycle for the mind," empowering us to innovate, think smarter, and improve our world.
                   </li>
                 </ul>
               </div>
