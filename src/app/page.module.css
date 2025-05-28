@@ -6,54 +6,216 @@
   --button-primary-hover: #383838;
   --button-secondary-hover: #f2f2f2;
 
-  display: grid;
-  grid-template-rows: 20px 1fr 20px;
-  align-items: center;
-  justify-items: center;
-  min-height: 100svh;
-  padding: 80px;
-  gap: 64px;
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack children vertically */
+  min-height: 100vh; /* Ensure it takes at least full viewport height */
+  width: 100%; /* Ensure it takes full viewport width */
+  padding: 0; /* Remove padding to allow hero section to be edge-to-edge */
   font-family: var(--font-geist-sans);
-}
-
-@media (prefers-color-scheme: dark) {
-  .page {
-    --gray-rgb: 255, 255, 255;
-    --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
-    --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
-
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
-  }
+  /* align-items: stretch; is default for flex, which is good for .main */
 }
 
 .main {
+  flex: 1;
+  display: flex;
+  width: 100%;
+}
+
+.heroRow {
+  display: flex;
+  flex-direction: column; /* Stack spacer and content wrapper */
+  align-items: stretch; /* Make children (spacer, wrapper) full width */
+  justify-content: flex-start; /* Align spacer to top, then wrapper */
+  min-height: 100vh;
+  width: 100%;
+  background: #1c1c1e; /* New darker hero background */
+  box-sizing: border-box;
+  /* Padding is removed from here, handled by spacer and wrapper */
+}
+
+.heroSpacer {
+  height: 6rem; /* Explicit top space */
+  width: 100%;
+  flex-shrink: 0; /* Prevent spacer from shrinking */
+}
+
+.heroContentWrapper {
+  display: flex;
+  flex-direction: row; /* Image and text side-by-side */
+  align-items: flex-start; /* Align content to the top of the wrapper */
+  justify-content: flex-start; /* Align the image/text group to the left */
+  gap: 4rem; /* Gap between image and text */
+  width: 100%;
+  padding: 0 3rem 4rem 3rem; /* Side and bottom padding */
+  box-sizing: border-box;
+  flex: 1; /* Allow wrapper to take remaining vertical space */
+}
+
+@media (max-width: 768px) {
+  .heroSpacer {
+    height: 4rem; /* Reduce spacer height on mobile */
+  }
+  .heroContentWrapper {
+    flex-direction: column; /* Stack image and text on mobile */
+    padding: 0 1.5rem 3rem 1.5rem; /* Mobile padding for content */
+    gap: 2.5rem; /* Mobile gap */
+    align-items: center; /* Center items in the column */
+  }
+  /* The following styles were part of the original media query and targeted specific elements */
+  .heroIntroCol { /* This applies to the intro column within the content wrapper */
+    align-items: center; /* Ensures text block is centered if not full width */
+    text-align: center; /* Centers the text itself within the intro column */
+  }
+  .heroIntroCol .bioList { /* Ensures bio list text is readable */
+    text-align: left; /* Overrides parent text-align: center for lists */
+    max-width: 100%;
+  }
+  .heroIntroCol .bioList ul.hobbyList {
+    padding-left: 1.5em;
+  }
+  .profileImage { /* Mobile specific size for profile image */
+    width: 180px;
+    height: 180px;
+  }
+}
+
+.heroImageCol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroIntroCol {
   display: flex;
   flex-direction: column;
-  gap: 32px;
-  grid-row-start: 2;
+  align-items: flex-start; /* Aligns children (h1, h2, bio) to the start of their line */
+  justify-content: center; /* Vertically centers the group of text content within the column */
+  flex: 1; /* Allow the intro column to expand and take available space */
+  /* max-width: 420px; was removed */
 }
 
-.main ol {
-  font-family: var(--font-geist-mono);
-  padding-left: 0;
+.heroIntroCol .bio {
+  text-align: left;
+  margin-bottom: 1.6rem;
+}
+
+@media (max-width: 700px) {
+  .heroRow {
+    flex-direction: column;
+    gap: 1.4rem;
+    align-items: center;
+  }
+  .heroIntroCol {
+    align-items: center;
+    text-align: center;
+    max-width: 98vw;
+  }
+  .heroIntroCol .bio {
+    text-align: center;
+  }
+}
+
+.profileImage {
+  border-radius: 50%;
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border: 4px solid #4a4a4f; /* Lighter border for contrast */
+  box-shadow: 0 6px 24px rgba(0,0,0,0.14);
+  margin-bottom: 1.2rem;
+}
+
+.title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin: 0.4rem 0 0.15rem 0;
+  color: #fff;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 1.4rem;
+  color: #70a1ff;
+}
+
+.bio {
+  max-width: 600px;
+  text-align: left;
+  margin-bottom: 2.2rem;
+  font-size: 1.17rem;
+  color: #eaeaea;
+  line-height: 1.7;
+}
+
+.bioList {
+  list-style-type: disc;
+  padding-left: 1.4em;
   margin: 0;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: -0.01em;
-  list-style-position: inside;
 }
 
-.main li:not(:last-of-type) {
-  margin-bottom: 8px;
+.bioList > li {
+  margin-bottom: 1.25em;
+  font-size: 1.13rem;
+  line-height: 1.65;
 }
 
-.main code {
-  font-family: inherit;
-  background: var(--gray-alpha-100);
-  padding: 2px 4px;
-  border-radius: 4px;
+.bioList ul {
+  list-style-type: circle;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  padding-left: 1.5em;
+}
+
+.bioList ul li {
+  margin-bottom: 0.25em;
+  font-size: 1.08rem;
+}
+
+.hobbyList {
+  list-style-type: circle; /* Or 'square' or custom */
+  margin-top: 0.6em;
+  margin-bottom: 0.6em;
+  padding-left: 1.8em; /* Ensure good indentation */
+}
+
+.hobbyList li {
+  font-size: 1.05rem; /* Slightly smaller for sub-items if desired */
+  margin-bottom: 0.4em;
+  line-height: 1.5;
+}
+
+.links {
+  margin-bottom: 2.5rem;
+}
+
+.primaryBtn {
+  background: linear-gradient(90deg, #007bff 0%, #00c6ff 100%); /* Brighter blue to cyan gradient */
+  color: #fff;
+  padding: 0.9rem 2rem;
+  border-radius: 999px;
+  text-decoration: none;
   font-weight: 600;
+  font-size: 1.15rem;
+  box-shadow: 0 0 15px rgba(0, 198, 255, 0.3), 0 0 25px rgba(0, 123, 255, 0.2); /* Subtle blue/cyan glow */
+  border: none;
+  outline: none;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smoother transition */
+  display: inline-block;
+}
+
+.primaryBtn:hover {
+  background: linear-gradient(90deg, #0056b3 0%, #009bcd 100%); /* Deeper, richer blues on hover */
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 0 20px rgba(0, 198, 255, 0.45), 0 0 30px rgba(0, 123, 255, 0.3); /* More intense glow on hover */
+}
+
+.footer {
+  width: 100%;
+  padding: 2rem 0 1rem 0;
+  text-align: center;
+  color: #888;
+  font-size: 0.97rem;
 }
 
 .ctas {
@@ -93,9 +255,17 @@ a.secondary {
 }
 
 .footer {
-  grid-row-start: 3;
+  /* grid-row-start: 3; Removed as .page is now flex */
   display: flex;
-  gap: 24px;
+  justify-content: center; /* Center the text content */
+  align-items: center; /* Vertically center text if footer has fixed height or larger padding */
+  gap: 24px; /* Retained if you plan to add more items to the footer */
+  background: #1c1c1e; /* Match hero section background */
+  color: var(--foreground); /* Ensure text color is light */
+  padding: 1.5rem 3rem; /* Vertical and horizontal padding */
+  width: 100%;
+  box-sizing: border-box;
+  flex-shrink: 0; /* Prevent footer from shrinking if content above is too tall */
 }
 
 .footer a {
