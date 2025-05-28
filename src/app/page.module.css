@@ -110,10 +110,20 @@
 }
 
 .contactLinkItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Space between icon and text */
   color: var(--foreground);
   text-decoration: none;
   font-size: 0.9rem;
   transition: color 0.2s ease;
+}
+
+/* Adjust icon size and alignment */
+.contactLinkItem svg {
+  width: 1.2em; /* Make icon slightly larger than text */
+  height: 1.2em; /* Make icon slightly larger than text */
+  fill: currentColor; /* Ensures icon color matches text color */
 }
 
 .contactLinkItem:hover {

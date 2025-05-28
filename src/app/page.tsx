@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import { MailSolid, Linkedin, Github } from 'iconoir-react';
 
 export default function Home() {
   return (
@@ -18,9 +19,9 @@ export default function Home() {
                 priority
               />
               <div className={styles.contactLinks}>
-                <a href="mailto:your.email@example.com" className={styles.contactLinkItem}>Email</a>
-                <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className={styles.contactLinkItem}>LinkedIn</a>
-                <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className={styles.contactLinkItem}>GitHub</a>
+                <a href="mailto:your.email@example.com" className={styles.contactLinkItem}><MailSolid /> Email</a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className={styles.contactLinkItem}><Linkedin /> LinkedIn</a>
+                <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className={styles.contactLinkItem}><Github /> GitHub</a>
               </div>
             </div>
             <div className={styles.heroIntroCol}>
