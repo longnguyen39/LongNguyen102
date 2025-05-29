@@ -1,0 +1,21 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem; /* Adjust padding as needed */
+  background-color: #1c1c1e; /* Same as hero background, or choose another */
+  color: #fff; /* Icon color */
+  width: 100%;
+  box-sizing: border-box;
+  position: fixed; /* Keep navbar at the top */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensure it's above other content */
+  height: 4rem; /* Standard navbar height, adjust as needed */
+}
+
+.menuIcon {
+  cursor: pointer;
+  /* Add other styling for the icon container if needed */
+}
+
+/* Add styles for other navbar elements if you add them */

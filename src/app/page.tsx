@@ -1,10 +1,12 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import { MailSolid, Linkedin, Github } from 'iconoir-react';
+import Navbar from '@/components/Navbar'; // Assuming @ is configured for src
 
 export default function Home() {
   return (
     <div className={styles.page}>
+      <Navbar />
       <main className={styles.main}>
         <section className={styles.heroRow}>
           <div className={styles.heroSpacer}></div>
@@ -19,9 +21,9 @@ export default function Home() {
                 priority
               />
               <div className={styles.contactLinks}>
-                <a href="mailto:your.email@example.com" className={styles.contactLinkItem}><MailSolid /> Email</a>
-                <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className={styles.contactLinkItem}><Linkedin /> LinkedIn</a>
-                <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className={styles.contactLinkItem}><Github /> GitHub</a>
+                <a href="mailto:longnguyen39ios@gmail.com" className={styles.contactLinkItem}><MailSolid /> Email</a>
+                <a href="https://www.linkedin.com/in/long-nguyen-309092205" target="_blank" rel="noopener noreferrer" className={styles.contactLinkItem}><Linkedin /> LinkedIn</a>
+                <a href="https://github.com/longnguyen39" target="_blank" rel="noopener noreferrer" className={styles.contactLinkItem}><Github /> GitHub</a>
               </div>
             </div>
             <div className={styles.heroIntroCol}>

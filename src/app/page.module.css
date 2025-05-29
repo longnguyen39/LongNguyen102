@@ -1,4 +1,5 @@
 .page {
+  padding-top: 4rem; /* Height of the fixed navbar */
   --gray-rgb: 0, 0, 0;
   --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
   --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
@@ -103,10 +104,10 @@
 
 .contactLinks {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 1.5rem; /* Space between individual contact links */
-  margin-top: 0.5rem; /* Additional space if needed, complements gap in heroImageCol */
+  flex-direction: column; /* Changed to column for vertical layout */
+  align-items: flex-start; /* Align items to the start (left) */
+  gap: 1rem; /* Adjusted gap for vertical layout */
+  margin-top: 0.5rem;
 }
 
 .contactLinkItem {
