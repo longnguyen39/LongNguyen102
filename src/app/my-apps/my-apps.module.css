@@ -1,0 +1,265 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+  padding: 0 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.appsHeader {
+  text-align: center;
+  margin-top: 4.5rem;
+  margin-bottom: 1rem;
+  padding-top: 4.5rem;
+  padding-bottom: 3rem;
+}
+
+.appsTitle {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: white;
+  font-weight: 700;
+}
+
+.appsIntro {
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: #ccc;
+  font-size: 1.1rem;
+}
+
+.appSection {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin: 4rem auto;
+  padding: 2rem;
+  padding-top: 4.4rem;
+  border-radius: 20px;
+  transition: background 0.3s;
+  width: 90%;
+  max-width: 1200px;
+  box-sizing: border-box;
+  align-items: flex-start; /* Align items to the top */
+}
+
+.appSection1 {
+  background: linear-gradient(90deg, #0f2027 0%, #2c5364 100%);
+}
+.appSection2 {
+  background: linear-gradient(90deg, #232526 0%, #414345 100%);
+}
+.appSection3 {
+  background: linear-gradient(90deg, #1a3a4a 0%, #3a7a94 100%);
+}
+.appSection4 {
+  background: linear-gradient(90deg, #2d2e2e 0%, #5a5d5f 100%);
+}
+
+
+.appImagesCol {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding-right: 2rem;
+  height: 100%;
+  justify-content: space-between; /* This will push the screenshot to the top and button to the bottom */
+}
+
+.appIcon {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 22%;
+}
+
+.appScreenshot {
+  max-width: 250px;
+  height: auto;
+}
+
+.appDetailsCol {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.appTitle {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.appDescription {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  color: #ccc;
+  font-weight: normal;
+  white-space: pre-line;
+}
+
+.smallerDescription {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.techStack {
+  margin: 1.5rem 0;
+  padding: 0.5rem 0;
+}
+
+.techStackTitle {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #00c6ff;
+}
+
+.techStackList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.techItem {
+  background-color: rgba(0, 198, 255, 0.1);
+  color: #00c6ff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* Button Group */
+.buttonGroup {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+  flex-wrap: wrap;
+}
+
+/* Shared button styles */
+.appStoreBtn, .githubBtn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.7rem 1.5rem;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1.0rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  min-width: 160px; /* Increased minimum width */
+  justify-content: center;
+  text-align: center;
+}
+
+/* App Store button specific */
+.appStoreBtn {
+  background-color: #00c6ff;
+  color: #000;
+}
+
+.appStoreBtn:hover {
+  background-color: #00d7ff;
+  transform: translateY(-2px);
+}
+
+/* GitHub button */
+.githubBtn {
+  background-color: #29d350; /* GitHub green */
+  color: #000;
+  border: 1px solid #29d350;
+}
+
+.githubBtn:hover {
+  background-color: #29d350; /* Slightly darker green on hover */
+  transform: translateY(-2px);
+}
+
+/* Icon styling */
+.appStoreBtn svg, .githubBtn svg {
+  margin-right: 0.6rem;
+  width: 1.2em;
+  height: 1.2em;
+}
+
+.publishedOn {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  color: #ccc;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.2rem 0; /* Added vertical padding */
+}
+
+.footer {
+  width: 100%;
+  min-height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2.5rem 3rem 2.5rem 3rem;
+  box-sizing: border-box;
+  color: #888;
+  font-size: 0.97rem;
+}
+
+.footerText {
+  white-space: nowrap;
+  color: inherit;
+  font-size: inherit;
+}
+
+.footerSocials {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+.footerSocialLink {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: #fff;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footerSocialLink:hover {
+  color: #00c6ff;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .appSection {
+    flex-direction: column;
+  }
+  
+  .appImagesCol {
+    padding-right: 0;
+    margin-bottom: 2rem;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .appIcon {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .appScreenshot {
+    max-width: 200px;
+  }
+}

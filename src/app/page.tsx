@@ -1,29 +1,70 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import { MailSolid, Linkedin, Github } from 'iconoir-react';
+import { MailSolid, Github, AppleMac } from 'iconoir-react';
+import { FaLinkedinIn } from 'react-icons/fa';
+import EmailCopyLink from '@/components/EmailCopyLink';
 import Navbar from '@/components/Navbar'; // Assuming @ is configured for src
+import AnimatedOnce from '@/components/AnimatedOnce';
+import AppCard from '@/components/AppCard';
 
 export default function Home() {
+  // Footer social icons - for use at the bottom right
+  const FooterSocials = () => (
+    <div className={styles.footerSocials}>
+      <a
+        href="https://www.linkedin.com/in/long-nguyen-309092205"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={styles.footerSocialLink}
+      >
+        <FaLinkedinIn className="linkedin" style={{ color: '#0077b5', fontSize: '1.5em' }} />
+      </a>
+      <a
+        href="https://github.com/longnguyen39"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={styles.footerSocialLink}
+      >
+        <Github className="github" style={{ color: '#27ae60', fontSize: '1.0em' }} />
+      </a>
+      <a
+        href="https://apps.apple.com/us/developer/long-nguyen/id1519144221"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={styles.footerSocialLink}
+      >
+        <AppleMac style={{ color: '#fff', fontSize: '1.0em' }} />
+      </a>
+    </div>
+  );
   return (
     <div className={styles.page}>
       <Navbar />
       <main className={styles.main}>
-        <section className={styles.heroRow}>
+        <AnimatedOnce animation="slideUp" duration={0.5} delay={0} animateOnce={true}>
+          <section className={styles.heroRow}>
           <div className={styles.heroSpacer}></div>
           <div className={styles.heroContentWrapper}>
             <div className={styles.heroImageCol}>
               <Image
                 src="/profile.jpg"
                 alt="Long Nguyen profile"
-                width={220}
-                height={220}
+                width={264}
+                height={264}
                 className={styles.profileImage}
                 priority
               />
               <div className={styles.contactLinks}>
-                <a href="mailto:longnguyen39ios@gmail.com" className={styles.contactLinkItem}><MailSolid /> Email</a>
-                <a href="https://www.linkedin.com/in/long-nguyen-309092205" target="_blank" rel="noopener noreferrer" className={styles.contactLinkItem}><Linkedin /> LinkedIn</a>
-                <a href="https://github.com/longnguyen39" target="_blank" rel="noopener noreferrer" className={styles.contactLinkItem}><Github /> GitHub</a>
+                <EmailCopyLink email="longnguyen39ios@gmail.com" className={styles.contactLinkItem} />
+                
+                <a href="https://www.linkedin.com/in/long-nguyen-309092205" target="_blank" rel="noopener noreferrer" className={styles.contactLinkItem} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+  <FaLinkedinIn style={{ color: '#0077b5' }} />
+  <span style={{ color: '#fff' }}>LinkedIn</span>
+</a>
+                <a href="https://github.com/longnguyen39" target="_blank" rel="noopener noreferrer" className={styles.contactLinkItem}><Github style={{ color: '#27ae60' }} /> GitHub</a>
+                <a href="https://apps.apple.com/us/developer/long-nguyen/id1519144221" target="_blank" rel="noopener noreferrer" className={styles.contactLinkItem} style={{ color: '#fff' }}>
+                  <AppleMac /> App Store
+                </a>
               </div>
             </div>
             <div className={styles.heroIntroCol}>
@@ -32,18 +73,18 @@ export default function Home() {
               <div className={styles.bio}>
                 <ul className={styles.bioList}>
                   <li>
-                    <strong>iOS Developer & App Creator:</strong> Crafting impactful iOS applications designed to enhance daily life. Proud to have <strong>4 apps</strong> live on the App Store!
+                    <strong>iOS Developer:</strong> Crafting impactful iOS applications designed to enhance daily life. I am proud to have published many apps on the App Store!
                   </li>
                   <li>
-                    <strong>AI Enthusiast:</strong> Deeply exploring how Artificial Intelligence can serve as a "bicycle for the mind," empowering us to innovate, think smarter, and improve our world.
+                    <strong>AI Enthusiast:</strong> Deeply exploring how Artificial Intelligence can serve as a "bicycle for the mind", empowering us to innovate, think smarter, and improve our world.
                   </li>
                   <li>
                     <strong>Active Lifestyle:</strong> When I'm not coding, you'll often find me:
                     <ul className={styles.hobbyList}>
-                      <li>Exploring scenic trails while hiking</li>
-                      <li>Staying active and fit at the gym</li>
-                      <li>Hitting the pavement for an energizing run</li>
-                      <li>Enjoying a friendly game of Pickleball</li>
+                      <li>Hiking in the mountains</li>
+                      <li>Working out at the gym</li>
+                      <li>Running in the park</li>
+                      <li>Playing Pickleball with friends</li>
                     </ul>
                   </li>
                 </ul>
@@ -51,7 +92,7 @@ export default function Home() {
               <div className={styles.links}>
                 <a
                   className={styles.primaryBtn}
-                  href="https://apps.apple.com/us/developer/long-nguyen/idYOUR_APPLE_ID"
+                  href="https://apps.apple.com/us/developer/long-nguyen/id1519144221"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -61,9 +102,42 @@ export default function Home() {
             </div>
           </div>
         </section>
+        </AnimatedOnce>
+        <AnimatedOnce animation="slideUp" duration={0.5} delay={0.1} animateOnce={true}>
+          <section className={styles.myAppsSection}>
+          <h2 className={styles.myAppsTitle}>My Featured Apps</h2>
+          <div className={styles.myAppsGrid}>
+            <AppCard
+              title="ChefBot"
+              image="/ChefBotFeatured.png"
+              description="Your AI-powered cooking assistant that helps you create delicious recipes from ingredients you have at home. Our app's purpose is to make the most with the least."
+              githubLink="https://github.com/longnguyen39/ChefBot"
+              appStoreLink="https://apps.apple.com/us/app/chefbot-ai-powered-recipes/id6745570785"
+              appId="chefbot"
+            />
+            <AppCard
+              title="Daily Boost!"
+              image="/DailyBoostFeatured.png"
+              description="Get daily motivational quotes from your favorite fictional and non-fictional characters to boost your energy and motivation every day."
+              githubLink="https://github.com/longnguyen39/DailyBoost"
+              appStoreLink="https://apps.apple.com/us/app/daily-boost/id6742382918"
+              appId="daily"
+            />
+            <AppCard
+              title="MulaMula"
+              image="/MulaMulaFeatured.png"
+              description="The ultimate expense tracker app for college students, making it easy to monitor daily and monthly spending with a beautiful, intuitive interface."
+              githubLink="https://github.com/longnguyen39"
+              appStoreLink="https://apps.apple.com/us/app/mulamula/id6479544775"
+              appId="mulamula"
+            />
+          </div>
+          </section>
+        </AnimatedOnce>
       </main>
       <footer className={styles.footer}>
-        <span>© {new Date().getFullYear()} Long Nguyen. Built with Next.js.</span>
+        <span className={styles.footerText}>&copy; {new Date().getFullYear()} Long Nguyen</span>
+        <FooterSocials />
       </footer>
     </div>
   );

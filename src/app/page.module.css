@@ -19,6 +19,7 @@
 .main {
   flex: 1;
   display: flex;
+  flex-direction: column; /* Stack sections vertically */
   width: 100%;
 }
 
@@ -35,7 +36,7 @@
 }
 
 .heroSpacer {
-  height: 6rem; /* Explicit top space */
+  height: 7.2rem; /* Increased top space by 1.2x */
   width: 100%;
   flex-shrink: 0; /* Prevent spacer from shrinking */
 }
@@ -52,9 +53,50 @@
   flex: 1; /* Allow wrapper to take remaining vertical space */
 }
 
+@media (min-width: 769px) {
+  .heroContentWrapper {
+    align-items: stretch; /* Make both columns stretch to same height */
+  }
+  .heroImageCol, .heroIntroCol {
+    align-items: flex-start !important;
+  }
+  .contactLinks {
+    align-items: flex-start !important;
+    width: 100%;
+  }
+}
+
+.heroImageCol {
+  display: flex;
+  flex-direction: column; /* Stack image and contact links */
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem; /* Space between image and links */
+  padding-right: 2rem; /* Add trailing space for intro text */
+  padding-top: 0;
+}
+
+.profileImage {
+  margin-top: 0;
+}
+
+.heroContentWrapper {
+  align-items: flex-start;
+}
+
+
+.contactLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.2rem;
+  width: 100%;
+}
+
+
 @media (max-width: 768px) {
   .heroSpacer {
-    height: 4rem; /* Reduce spacer height on mobile */
+    height: 4.8rem; /* Increased mobile spacer height by 1.2x */
   }
   .heroContentWrapper {
     flex-direction: column; /* Stack image and text on mobile */
@@ -85,15 +127,18 @@
   flex-direction: column; /* Stack image and contact links */
   justify-content: center;
   align-items: center;
-  gap: 1rem; /* Space between image and contact links container */
+  gap: 1rem; /* Space between image and links */
+  padding-right: 2rem; /* Add trailing space for intro text */
+  padding-top: 2.5rem; /* Add more top padding so profile image is not too close to nav bar */
 }
 
 .heroIntroCol {
   display: flex;
   flex-direction: column;
   align-items: flex-start; /* Aligns children (h1, h2, bio) to the start of their line */
-  justify-content: center; /* Vertically centers the group of text content within the column */
+  justify-content: flex-start; /* Align to top */
   flex: 1; /* Allow the intro column to expand and take available space */
+  margin-top: 0; /* Ensure no top margin */
   /* max-width: 420px; was removed */
 }
 
@@ -151,8 +196,8 @@
 
 .profileImage {
   border-radius: 50%;
-  width: 220px;
-  height: 220px;
+  width: 264px; /* Increased by 1.2x */
+  height: 264px;
   object-fit: cover;
   border: 4px solid #4a4a4f; /* Lighter border for contrast */
   box-shadow: 0 6px 24px rgba(0,0,0,0.14);
@@ -162,7 +207,7 @@
 .title {
   font-size: 2.4rem;
   font-weight: 700;
-  margin: 0.4rem 0 0.15rem 0;
+  margin: 0 0 0.15rem 0; /* Remove top margin */
   color: #fff;
 }
 
@@ -174,7 +219,7 @@
 }
 
 .bio {
-  max-width: 600px;
+  max-width: none; /* Allow bio text to expand to available width */
   text-align: left;
   margin-bottom: 2.2rem;
   font-size: 1.17rem;
@@ -246,11 +291,50 @@
 
 .footer {
   width: 100%;
-  padding: 2rem 0 1rem 0;
-  text-align: center;
+  height: 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10rem 3rem 3rem 3rem; /* Increased vertical padding for taller footer */
+  box-sizing: border-box;
   color: #888;
   font-size: 0.97rem;
 }
+
+.footerSocials {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+.footerText {
+  white-space: nowrap;
+  color: inherit;
+  font-size: inherit;
+}
+
+.footerSocialLink {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: #fff;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footerSocialLink:hover {
+  color: #00c6ff;
+}
+
+.footerSocialLink .linkedin {
+  color: #0077b5;
+}
+
+.footerSocialLink .github {
+  color: #27ae60;
+}
+
 
 .ctas {
   display: flex;
@@ -369,4 +453,152 @@ a.secondary {
   .logo {
     filter: invert();
   }
+}
+
+/* My Apps Section */
+/* Featured apps section container */
+.myAppsSection {
+  background-color: rgb(255, 55, 95);
+  padding: 3rem 2rem;
+}
+
+.myAppsTitle {
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 3rem; /* Added extra spacing below title */
+}
+
+.myAppsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Individual app card */
+.appCard {
+  background-color: #111;
+  color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform, box-shadow;
+  text-align: center;
+  height: 100%;
+}
+
+.appCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+/* App image container */
+.appImageContainer {
+  width: 100%;
+  height: 240px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 0.5rem;
+}
+
+.appImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+
+.appCard:hover .appImage {
+  transform: scale(1.05);
+}
+
+/* Icons row in each app card */
+.appCardIcons {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  background: transparent;
+  margin-top: auto;
+}
+
+.appCardIcons a {
+  transition: transform 0.2s ease;
+}
+
+.appCardIcons a:hover {
+  transform: scale(1.2);
+}
+
+/* App card interactive styling */
+.clickableCard {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  user-select: none;
+}
+
+.clickableCard:hover {
+  text-decoration: none;
+}
+
+.clickableCard:focus {
+  outline: 2px solid #00c6ff;
+  outline-offset: 2px;
+}
+
+.appCardIcons svg {
+  width: 1.8rem;
+  height: 1.8rem;
+  color: #fff;
+  fill: #fff;
+}
+
+/* Style specifically for GitHub icon */
+.appCardIcons a:first-child svg {
+  color: #2ea043; /* GitHub green */
+  fill: #2ea043;
+}
+
+.appCard h3 {
+  margin: 1rem 0 0.5rem;
+  padding: 0 1.5rem;
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.appCard p {
+  font-size: 1rem;
+  color: #eaeaea;
+  text-align: center;
+  padding: 0 1.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.iconCircle {
+  background-color: #000;
+  border-radius: 50%;
+  width: 2.4rem;
+  height: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.appDescription {
+  padding: 0 1.5rem;
+  color: #666;
+  text-align: center;
+  margin-bottom: 1rem;
 }

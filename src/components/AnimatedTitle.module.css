@@ -1,0 +1,24 @@
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animatedTitle {
+  opacity: 0;
+  transform: translateY(20px);
+  animation-fill-mode: both;
+  will-change: opacity, transform;
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+.animatedTitle.visible {
+  animation-name: slideUp;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+}
