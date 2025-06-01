@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { Menu, MailSolid, Github, User } from 'iconoir-react';
+import { Github, User } from 'iconoir-react';
 import { FaLinkedinIn, FaHome, FaApple } from 'react-icons/fa';
 import EmailCopyLink from './EmailCopyLink';
 import styles from './Navbar.module.css';
@@ -57,7 +57,7 @@ const Navbar: React.FC = () => {
           <FaHome size={24} />
         </Link>
         <div className={styles.slogan}>
-          "Building an innovative product is like a journey into the unknown" — <em>A passionate developer</em>
+          &quot;Building an innovative product is like a journey into the unknown&quot; — <em>A passionate developer</em>
         </div>
         <div className={styles.menuIconContainer} ref={menuRef}>
           <button 

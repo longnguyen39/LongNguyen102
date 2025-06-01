@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import { MailSolid, Github, AppleMac } from 'iconoir-react';
+import { Github, AppleMac } from 'iconoir-react';
 import { FaLinkedinIn } from 'react-icons/fa';
 import EmailCopyLink from '@/components/EmailCopyLink';
 import Navbar from '@/components/Navbar'; // Assuming @ is configured for src
@@ -76,10 +76,10 @@ export default function Home() {
                     <strong>iOS Developer:</strong> Crafting impactful iOS applications designed to enhance daily life. I am proud to have published many apps on the App Store!
                   </li>
                   <li>
-                    <strong>AI Enthusiast:</strong> Deeply exploring how Artificial Intelligence can serve as a "bicycle for the mind", empowering us to innovate, think smarter, and improve our world.
+                    <strong>AI Enthusiast:</strong> Deeply exploring how Artificial Intelligence can serve as a &quot;bicycle for the mind&quot;, empowering us to innovate, think smarter, and improve our world.
                   </li>
                   <li>
-                    <strong>Active Lifestyle:</strong> When I'm not coding, you'll often find me:
+                    <strong>Active Lifestyle:</strong> When I&apos;m not coding, you&apos;ll often find me:
                     <ul className={styles.hobbyList}>
                       <li>Hiking in the mountains</li>
                       <li>Working out at the gym</li>
@@ -110,7 +110,7 @@ export default function Home() {
             <AppCard
               title="ChefBot"
               image="/ChefBotFeatured.png"
-              description="Your AI-powered cooking assistant that helps you create delicious recipes from ingredients you have at home. Our app's purpose is to make the most with the least."
+              description="Your AI-powered cooking assistant that helps you create delicious recipes from ingredients you have at home. Our app&apos;s purpose is to make the most with the least."
               githubLink="https://github.com/longnguyen39/ChefBot"
               appStoreLink="https://apps.apple.com/us/app/chefbot-ai-powered-recipes/id6745570785"
               appId="chefbot"

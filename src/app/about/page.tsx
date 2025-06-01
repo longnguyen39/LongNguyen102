@@ -96,7 +96,7 @@ export default function About() {
         <section className={aboutStyles.introSection}>
           <AnimatedOnce animation="slideUp" duration={0.5} delay={0} animateOnce={true}>
             <p className={aboutStyles.introText}>
-              I'm a passionate iOS developer with over 5 years of experience creating intuitive and impactful mobile applications. My journey in software development has been driven by a desire to solve real-world problems through elegant code and thoughtful design. I dream to work in a tech company, whether it be a startup or a large company. With a strong foundation in Swift, SwiftUI and AI integration, I strive to build impactful applications that enhance life quality of people around me. When I'm not coding, you'll find me exploring hiking trails, playing pickleball, and continuously learning about tech and business.
+              I&apos;m a passionate iOS developer with over 5 years of experience creating intuitive and impactful mobile applications. My journey in software development has been driven by a desire to solve real-world problems through elegant code and thoughtful design. I dream to work in a tech company, whether it be a startup or a large company. With a strong foundation in Swift, SwiftUI and AI integration, I strive to build impactful applications that enhance life quality of people around me. When I&apos;m not coding, you&apos;ll find me exploring hiking trails, playing pickleball, and continuously learning about tech and business.
             </p>
           </AnimatedOnce>
         </section>
@@ -108,7 +108,7 @@ export default function About() {
             <div>
               <h3 className={aboutStyles.experienceCardTitle + ' ' + aboutStyles.leftAlign}>App Development Journey</h3>
               <p>
-                I've been developing iOS applications since the Corona Virus pandemic, focusing on creating intuitive and impactful user experiences. My journey began with Swift and UIKit. Then, I started to learn SwiftUI and embrace the latest iOS frameworks and design patterns. My expertise includes:
+                I&apos;ve been developing iOS applications since the Corona Virus pandemic, focusing on creating intuitive and impactful user experiences. My journey began with Swift and UIKit. Then, I started to learn SwiftUI and embrace the latest iOS frameworks and design patterns. My expertise includes:
               </p>
               <ul className={aboutStyles.skillsList}>
                 <li>Swift & SwiftUI for modern, declarative interfaces</li>
@@ -161,7 +161,7 @@ export default function About() {
             <div>
               <h3 className={aboutStyles.experienceCardTitle}>AI Integration</h3>
               <p>
-              Since ChatGPT's groundbreaking launch, I've been captivated by AI's transformative potential and have made it an integral part of my daily workflow. From accelerating development cycles and enhancing code quality to conducting comprehensive market research and competitive analysis, AI tools have become my secret weapon for building innovative solutions. Key areas of focus:
+              Since ChatGPT&apos;s groundbreaking launch, I&apos;ve been captivated by AI&apos;s transformative potential and have made it an integral part of my daily workflow. From accelerating development cycles and enhancing code quality to conducting comprehensive market research and competitive analysis, AI tools have become my secret weapon for building innovative solutions. Key areas of focus:
               </p>  
               <ul className={aboutStyles.skillsList}>
                 <li>Code generation: for faster development cycles and enhanced code quality</li>
@@ -173,7 +173,7 @@ export default function About() {
             <div>
               <h3 className={aboutStyles.experienceCardTitle}>AI Models Research</h3>
               <p>
-                I'm constantly expanding my knowledge in the AI field, staying updated with the latest research and technologies. I believe AI will fundamentally transform how we interact with software, and I'm excited to be part of this evolution. Recent explorations:
+                I&apos;m constantly expanding my knowledge in the AI field, staying updated with the latest research and technologies. I believe AI will fundamentally transform how we interact with software, and I&apos;m excited to be part of this evolution. Recent explorations:
               </p>
               <ul className={aboutStyles.achievementsList}>
                 <li>ChatGPT: best at creativity, slow at speed</li>
@@ -195,10 +195,10 @@ export default function About() {
             <div>
               <h3 className={aboutStyles.experienceCardTitle}>Outdoor Activities</h3>
               <p>
-                When I'm not coding, I love spending time outdoors. Hiking through scenic trails gives me the perfect balance to my tech-focused work life. I try to explore a new trail at least twice a month, finding that these experiences often spark creative solutions to coding challenges.
+                When I&apos;m not coding, I love spending time outdoors. Hiking through scenic trails gives me the perfect balance to my tech-focused work life. I try to explore a new trail at least twice a month, finding that these experiences often spark creative solutions to coding challenges.
               </p>
               <p>
-                I'm also an avid runner, participating in several half-marathon events annually. The discipline and endurance required for running directly translates to my approach to complex development projects.
+                I&apos;m also an avid runner, participating in several half-marathon events annually. The discipline and endurance required for running directly translates to my approach to complex development projects.
               </p>
             </div>
             <div>

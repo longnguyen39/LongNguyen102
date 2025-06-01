@@ -49,7 +49,7 @@ export default function MyApps() {
       techStack: ["Swift", "SwiftUI", "OpenAI GPT-4 API", "Firebase", "Figma", "Canva", "NoSQL Database"],
       appStoreLink: "https://apps.apple.com/us/app/chefbot-ai-powered-recipes/id6745570785",
       githubLink: "https://github.com/longnguyen39/ChefBot",
-      publishedOn: "2023-02-15"
+      publishedOn: "2025"
     },
     {
       title: "MulaMula",
@@ -59,7 +59,7 @@ export default function MyApps() {
       techStack: ["Swift", "SwiftUI", "Canva", "OpenAi's ChatGPT", "Firebase", "Authentication", "NoSQL Database"],
       appStoreLink: "https://apps.apple.com/us/app/mulamula/id6479544775",
       githubLink: "https://github.com/longnguyen39",
-      publishedOn: "2022-12-20"
+      publishedOn: "2024"
     },
     {
       title: "Daily Boost!",
@@ -69,7 +69,7 @@ export default function MyApps() {
       techStack: ["Swift", "SwiftUI", "Figma", "Canva", "OpenAi's ChatGPT", "Local Notifications", "Firebase", "Authentication", "NoSQL Database"],
       appStoreLink: "https://apps.apple.com/us/app/daily-boost/id6742382918",
       githubLink: "https://github.com/longnguyen39/DailyBoost",
-      publishedOn: "2023-01-05"
+      publishedOn: "2025"
     },
     {
       title: "GoodPlaces",
@@ -79,7 +79,7 @@ export default function MyApps() {
       techStack: ["Swift", "SwiftUI", "Figma", "Canva", "Firebase", "Authentication", "NoSQL Database"],
       appStoreLink: "https://apps.apple.com/us/app/goodplaces/id1569767603",
       githubLink: "https://github.com/longnguyen39/GoodPlaces",
-      publishedOn: "2022-08-15"
+      publishedOn: "2021"
     }
   ];
 
@@ -114,7 +114,7 @@ export default function MyApps() {
             delay={0.1}
             animateOnce={true}
           >
-            These are the iOS applications I've developed and published on the Apple App Store. 
+            These are the iOS applications I&apos;ve developed and published on the Apple App Store. 
             Each app is crafted with attention to detail, focusing on intuitive user experience 
             and solving real-world problems for users.
           </AnimatedOnce>
@@ -132,7 +132,7 @@ export default function MyApps() {
               animateOnce={true}
               className={`${styles.appSection} ${styles[`appSection${index + 1}`]}`}
             >
-              <div className={styles.publishedOn}>Published on {app.publishedOn}</div>
+              <div className={styles.publishedOn}>Published in {app.publishedOn}</div>
               <div className={styles.appImagesCol}>
                 <div className={styles.appIcon}>
                   <Image
