@@ -3,8 +3,8 @@
 import Image from "next/image";
 import styles from "../page.module.css"; // Reusing the same styles
 import aboutStyles from "./about.module.css"; // Additional styles specific to about page
-import { Github, AppleMac } from 'iconoir-react';
-import { FaLinkedinIn } from 'react-icons/fa';
+import { AppleMac } from 'iconoir-react';
+import { FaLinkedinIn, FaApple, FaGithub } from 'react-icons/fa';
 import { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import AnimatedOnce from '@/components/AnimatedOnce';
@@ -53,7 +53,7 @@ export default function About() {
         rel="noopener noreferrer"
         className={styles.footerSocialLink}
       >
-        <Github className="github" style={{ color: '#27ae60', fontSize: '1.0em' }} />
+        <FaGithub className="github" style={{ color: '#27ae60', fontSize: '1.5em' }} />
       </a>
       <a
         href="https://apps.apple.com/us/developer/long-nguyen/id1519144221"
@@ -61,7 +61,7 @@ export default function About() {
         rel="noopener noreferrer"
         className={styles.footerSocialLink}
       >
-        <AppleMac style={{ color: '#fff', fontSize: '1.0em' }} />
+        <FaApple style={{ color: '#fff', fontSize: '1.5em' }} />
       </a>
     </div>
   );
@@ -124,7 +124,7 @@ export default function About() {
                   rel="noopener noreferrer"
                   className={aboutStyles.githubButton}
                 >
-                  <Github style={{ marginRight: '10px' }} /> View My Github
+                  <FaGithub style={{ marginRight: '10px' }} /> View My Github
                 </a>
               </div>
             </div>
@@ -147,7 +147,7 @@ export default function About() {
                   rel="noopener noreferrer"
                   className={aboutStyles.appStoreButton}
                 >
-                  <AppleMac style={{ marginRight: '10px' }} /> View My Apps on App Store
+                  <FaApple style={{ marginRight: '10px' }} /> View My Apps on App Store
                 </a>
               </div>
             </div>

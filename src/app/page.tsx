@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import { Github, AppleMac } from 'iconoir-react';
-import { FaLinkedinIn } from 'react-icons/fa';
+import { FaLinkedinIn, FaApple, FaGithub } from 'react-icons/fa';
 import EmailCopyLink from '@/components/EmailCopyLink';
 import Navbar from '@/components/Navbar'; // Assuming @ is configured for src
 import AnimatedOnce from '@/components/AnimatedOnce';
@@ -25,7 +25,7 @@ export default function Home() {
         rel="noopener noreferrer"
         className={styles.footerSocialLink}
       >
-        <Github className="github" style={{ color: '#27ae60', fontSize: '1.0em' }} />
+        <FaGithub className="github" style={{ color: '#27ae60', fontSize: '1.5em' }} />
       </a>
       <a
         href="https://apps.apple.com/us/developer/long-nguyen/id1519144221"
@@ -33,7 +33,7 @@ export default function Home() {
         rel="noopener noreferrer"
         className={styles.footerSocialLink}
       >
-        <AppleMac style={{ color: '#fff', fontSize: '1.0em' }} />
+        <FaApple style={{ color: '#fff', fontSize: '1.5em' }} />
       </a>
     </div>
   );
@@ -118,7 +118,7 @@ export default function Home() {
             <AppCard
               title="Daily Boost!"
               image="/DailyBoostFeatured.png"
-              description="Get daily motivational quotes from your favorite fictional and non-fictional characters to boost your energy and motivation every day."
+              description="Get daily motivational quotes from your favorite fictional and non-fictional characters to boost your energy and motivation every day. You can change your quote categories."
               githubLink="https://github.com/longnguyen39/DailyBoost"
               appStoreLink="https://apps.apple.com/us/app/daily-boost/id6742382918"
               appId="daily"

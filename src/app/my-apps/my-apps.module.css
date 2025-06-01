@@ -76,10 +76,11 @@
 }
 
 .appIcon {
+  position: relative; /* For layout='fill' on child Image */
   width: 100px;
   height: 100px;
   overflow: hidden;
-  border-radius: 22%;
+  border-radius: 22px; /* Fixed pixel value for consistent appearance */
 }
 
 .appScreenshot {

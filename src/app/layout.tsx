@@ -15,7 +15,12 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "LongNguyen39",
   description: "Long Nguyen Portfolio",
-};
+  icons: {
+    icon: [
+      { url: '/profile.jpg', sizes: 'any' },
+    ],
+  },
+}
 
 export default function RootLayout({
   children,

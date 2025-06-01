@@ -3,8 +3,8 @@
 import { useEffect } from "react";
 import Image from "next/image";
 import styles from "./my-apps.module.css";
-import { AppleMac } from 'iconoir-react';
-import { FaApple, FaLinkedinIn, FaGithub } from 'react-icons/fa';
+import { FaApple } from 'react-icons/fa';
+import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import Navbar from '@/components/Navbar';
 import AnimatedOnce from '@/components/AnimatedOnce';
 
@@ -26,7 +26,7 @@ export default function MyApps() {
         rel="noopener noreferrer"
         className={styles.footerSocialLink}
       >
-        <FaGithub className="github" style={{ color: '#27ae60', fontSize: '1.0em' }} />
+        <FaGithub className="github" style={{ color: '#27ae60', fontSize: '1.5em' }} />
       </a>
       <a
         href="https://apps.apple.com/us/developer/long-nguyen/id1519144221"
@@ -34,7 +34,7 @@ export default function MyApps() {
         rel="noopener noreferrer"
         className={styles.footerSocialLink}
       >
-        <AppleMac style={{ color: '#fff', fontSize: '1.0em' }} />
+        <FaApple style={{ color: '#fff', fontSize: '1.5em' }} />
       </a>
     </div>
   );
@@ -138,9 +138,9 @@ export default function MyApps() {
                   <Image
                     src={app.icon}
                     alt={`${app.title} App Icon`}
-                    width={100}
-                    height={100}
-                    style={{ objectFit: 'contain', width: '100%', height: '100%' }}
+                    fill
+                    style={{ objectFit: 'contain' }}
+                    sizes="100px"
                   />
                 </div>
                 <div className={styles.appScreenshot}>

@@ -21,6 +21,7 @@
   display: flex;
   flex-direction: column; /* Stack sections vertically */
   width: 100%;
+  background-color: #1c1c1e; /* Match footer and hero background */
 }
 
 .heroRow {
@@ -100,9 +101,10 @@
   }
   .heroContentWrapper {
     flex-direction: column; /* Stack image and text on mobile */
-    padding: 0 1.5rem 3rem 1.5rem; /* Mobile padding for content */
+    padding: 0 0 3rem 0; /* Remove horizontal padding for edge-to-edge */
     gap: 2.5rem; /* Mobile gap */
     align-items: center; /* Center items in the column */
+    width: 100%;
   }
   /* The following styles were part of the original media query and targeted specific elements */
   .heroIntroCol { /* This applies to the intro column within the content wrapper */
@@ -416,8 +418,10 @@ a.secondary {
 
 @media (max-width: 600px) {
   .page {
-    padding: 32px;
-    padding-bottom: 80px;
+    padding-left: 0; /* Remove left padding */
+    padding-right: 0; /* Remove right padding */
+    /* padding-top is inherited from global .page style (4rem for navbar) */
+    padding-bottom: 80px; /* Keep existing bottom padding */
   }
 
   .main {
@@ -459,7 +463,19 @@ a.secondary {
 /* Featured apps section container */
 .myAppsSection {
   background-color: rgb(255, 55, 95);
-  padding: 3rem 2rem;
+  padding: 3rem 1rem; /* Reduced horizontal padding for mobile */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .myAppsSection {
+    padding: 3rem 0; /* Remove horizontal padding on mobile */
+  }
+  
+  .myAppsGrid {
+    padding: 0 1rem; /* Add padding to the grid instead */
+  }
 }
 
 .myAppsTitle {
@@ -500,7 +516,7 @@ a.secondary {
 /* App image container */
 .appImageContainer {
   width: 100%;
-  height: 240px;
+  height: 280px;
   position: relative;
   overflow: hidden;
   border-radius: 8px 8px 0 0;
