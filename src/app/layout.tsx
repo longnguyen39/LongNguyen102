@@ -17,7 +17,11 @@ export const metadata: Metadata = {
   description: "Long Nguyen Portfolio",
   icons: {
     icon: [
-      { url: '/profile.jpg', sizes: 'any' },
+      { url: '/profile.jpg', sizes: '512x512', type: 'image/jpg' },
+      { url: '/profile.jpg', sizes: 'any', type: 'image/jpg' },
+    ],
+    apple: [
+      { url: '/profile.jpg', type: 'image/jpg' },
     ],
   },
 }
