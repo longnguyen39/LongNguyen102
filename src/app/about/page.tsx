@@ -207,13 +207,13 @@ export default function About() {
                 Maintaining physical fitness is important to me. I have a regular gym routine that helps me stay energized and focused. Weight training and high-intensity interval workouts form the core of my fitness regimen.
               </p>
               <p>
-                Recently, I've developed a passion for Pickleball – a fun, strategic sport that combines elements of tennis, badminton, and table tennis. It's become my favorite way to socialize while staying active.
+                Recently, I&apos;ve developed a passion for Pickleball – a fun, strategic sport that combines elements of tennis, badminton, and table tennis. It&apos;s become my favorite way to socialize while staying active.
               </p>
             </div>
             <div>
               <h3 className={aboutStyles.experienceCardTitle}>Continuous Learning</h3>
               <p>
-                I consider learning itself a hobby. I'm constantly taking online courses, reading business books, and seeking new app ideas. This perpetual learning mindset keeps me at the cutting edge of technology.
+                I consider learning itself a hobby. I&apos;m constantly taking online courses, reading business books, and seeking new app ideas. This perpetual learning mindset keeps me at the cutting edge of technology.
               </p>
               <p>
                 Beyond tech, I enjoy watching Disney movies and books on business, which often provide interesting perspectives that influence my approach to product development and innovation.
