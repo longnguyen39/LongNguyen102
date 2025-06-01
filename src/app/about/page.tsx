@@ -3,7 +3,6 @@
 import Image from "next/image";
 import styles from "../page.module.css"; // Reusing the same styles
 import aboutStyles from "./about.module.css"; // Additional styles specific to about page
-import { AppleMac } from 'iconoir-react';
 import { FaLinkedinIn, FaApple, FaGithub } from 'react-icons/fa';
 import { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
